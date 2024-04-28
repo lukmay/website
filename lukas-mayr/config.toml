@@ -1,0 +1,30 @@
+baseURL = 'http://lukasmayr.tech/'
+languageCode = 'en-us'
+title = 'Lukas Mayr'
+
+# delte this part ---------------------------------------------------
+
+theme="coming-soon"
+
+
+
+[params]
+    title = "Lukas Mayr" 
+    description = "Personal Blog & Portfolio"
+    favicon = ""
+    message = "COMING SOON!" 
+    release = "May 6, 2024" 
+    background = "" 
+
+socialIcons = [
+    {name = "email", url = "lukas.mayr01@gmail.com"},        
+    {name = "github", url = "https://github.com/lukmay"},    
+    {name = "instagram", url = "https://www.instagram.com/lukas_maxr/"},     
+    {name = "linkedin", url = "https://www.linkedin.com/in/lukas-mayr-649a99235/"},    
+] 
+
+[params.twitter]
+	enable = false 
+	username = "mansoorbarri"
+
+# ------------------------------------------------------------------
