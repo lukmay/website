@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html
+  lang="en-us"
+  dir="ltr"
+>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<title>
+  Projects | Lukas Mayr
+</title>
+
+<link rel="stylesheet" href="/css/main.css" />
+
+
+  </head>
+  <body>
+    <header><head>
+  
+  
+</head>
+<nav class="navbar">
+  <a href="/">
+    
+    <p class="logo">Lukas Mayr</p>
+  </a>
+<input type="checkbox" id="overlay-input" />
+<label for="overlay-input" id="overlay-button"><span></span></label>
+  <div id="overlay">
+    <ul>
+
+    <li>
+      <a href="/">Home</a>
+    </li>
+
+    <li>
+      <a href="/posts/">Blog</a>
+    </li>
+
+    <li>
+      <a href="/contact/">Contact</a>
+    </li>
+  
+      <li><button id="mode-toggle">☀️</button></li>
+    </ul>
+  </div>
+</nav>
+</header>
+
+    
+
+<main class="main-content">
+    
+  <section class="project"><h1 id="selection-of-projects">Selection of Projects</h1>
+<p>In the following i would like to highlte some of the projects i have made in the past.</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+ 
+<br/><br/>
+<hr />
+<div class="project-card">
+   
+  <div class="project-heading">
+    
+    <h2>Saral Portfolio Theme</h2>
+    
+  </div>
+  <div class="project-details">
+    <div class="description">
+      <p>Saral, meaning &#34;simple&#34; in Hindi (सरल), is a minimalist and elegant Hugo theme designed for those who appreciate clean and straightforward aesthetics.</p>
+    </div>
+    <div class="features">
+      <h4>Features :</h4>
+      <ul>
+        
+        <li>Easy to customize for a personal portfolio.</li>
+        
+        <li>Can easily switch between a single-page portfolio and a blog-focused portfolio.</li>
+        
+        <li>Users can use tags to categorize the posts.</li>
+        
+      </ul>
+    </div>
+    <div class="tech-stack">
+      <h4>Tech Stack :</h4>
+      
+      <img src="https://skillicons.dev/icons?i=go" alt="go" />
+      
+      <img src="https://skillicons.dev/icons?i=html" alt="html" />
+      
+      <img src="https://skillicons.dev/icons?i=css" alt="css" />
+      
+      <img src="https://skillicons.dev/icons?i=javascript" alt="javascript" />
+      
+      <img src="https://skillicons.dev/icons?i=hugo" alt="hugo" />
+      
+    </div>
+    <div class="project-links">
+      <h4>Check it out:</h4>
+      <br>
+      
+      
+      <a href="https://github.com/dipeshsingh253/saral-hugo-theme" target="_blank" rel="noopener noreferrer">Github</a>
+
+       
+      <a href="https://saral-hugo-theme.pages.dev/" target="_blank" rel="noopener noreferrer">Demo</a>
+
+       
+      <a href="https://stackoverflow.com/questions/36583502/how-to-force-a-linebreak" target="_blank" rel="noopener noreferrer"
+        >Presentation</a
+      >
+      
+    </div>
+  </div>
+</div>
+
+
+</section>
+  
+</main>
+
+
+    <footer><p> <a href="/impressum"> Impressum</a></a> <br>&copy; 2024 <a href="https://lukasmayr.tech">Lukas Mayr</a> </p>
+
+<script src="/js/main.js"></script>
+<script>
+  var prevScrollPos = window.pageYOffset;
+  var checkBox = document.getElementById("overlay-input");
+
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    var header = document.getElementsByTagName("header")[0];
+
+    if (prevScrollPos > currentScrollPos) {
+      header.classList.add("visible");
+      header.classList.remove("hidden");
+    } else {
+      header.classList.add("hidden");
+      header.classList.remove("visible");
+      checkBox.checked = false;
+    }
+    prevScrollPos = currentScrollPos;
+  };
+</script>
+<script>
+  
+  document.querySelectorAll("pre > code").forEach((codeblock) => {
+    const container = codeblock.parentNode.parentNode;
+
+    const copybutton = document.createElement("button");
+    copybutton.classList.add("copy-code");
+    copybutton.innerText = 'copy';
+
+    function copyingDone() {
+      copybutton.innerText = 'copied!';
+      setTimeout(() => {
+        copybutton.innerText = 'copy';
+      }, 2000);
+    }
+
+    copybutton.addEventListener("click", (cb) => {
+      if ("clipboard" in navigator) {
+        navigator.clipboard.writeText(codeblock.textContent);
+        copyingDone();
+        return;
+      }
+
+      const range = document.createRange();
+      range.selectNodeContents(codeblock);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      try {
+        document.execCommand("copy");
+        copyingDone();
+      } catch (e) {}
+      selection.removeRange(range);
+    });
+
+    if (container.classList.contains("highlight")) {
+      container.appendChild(copybutton);
+    } else if (container.parentNode.firstChild == container) {
+      
+    } else if (
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode
+        .nodeName == "TABLE"
+    ) {
+      
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(
+        copybutton
+      );
+    } else {
+      
+      codeblock.parentNode.appendChild(copybutton);
+    }
+  });
+</script>
+
+</footer>
+  </body>
+</html>

@@ -1,10 +1,79 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lukas Mayr</title>
-    <link>http://lukasmayr.tech/</link>
-    <description>Recent content on Lukas Mayr</description>
+    <title>Home on Lukas Mayr</title>
+    <link>https://saral-hugo-theme.pages.dev/</link>
+    <description>Recent content in Home on Lukas Mayr</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://lukasmayr.tech/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Jan 2023 08:00:00 -0700</lastBuildDate><atom:link href="https://saral-hugo-theme.pages.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why i love fourier transformatino and you should too!</title>
+      <link>https://saral-hugo-theme.pages.dev/posts/fourier_transform/</link>
+      <pubDate>Mon, 29 Apr 2024 20:31:50 +0200</pubDate>
+      
+      <guid>https://saral-hugo-theme.pages.dev/posts/fourier_transform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hello World!</title>
+      <link>https://saral-hugo-theme.pages.dev/posts/hello_world/</link>
+      <pubDate>Mon, 29 Apr 2024 18:13:27 +0200</pubDate>
+      
+      <guid>https://saral-hugo-theme.pages.dev/posts/hello_world/</guid>
+      <description>&lt;p&gt;this is my fist test post. Real posts will follow soon^^ But fo now this is the only thing you can see.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://saral-hugo-theme.pages.dev/project/</link>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://saral-hugo-theme.pages.dev/project/</guid>
+      <description>Selection of Projects In the following i would like to highlte some of the projects i have made in the past.
+ Saral Portfolio Theme  Saral, meaning &amp;#34;simple&amp;#34; in Hindi (सरल), is a minimalist and elegant Hugo theme designed for those who appreciate clean and straightforward aesthetics.
+ Features :  Easy to customize for a personal portfolio. Can easily switch between a single-page portfolio and a blog-focused portfolio. Users can use tags to categorize the posts.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://saral-hugo-theme.pages.dev/contact/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      
+      <guid>https://saral-hugo-theme.pages.dev/contact/</guid>
+      <description>Get in Touch! If you have any questions, want to discuss an exciting project, or just feel like chatting about technology, feel free to reach out.
+Reach out via email: lukas.mayr00@gmail.com
+My social media:    
+Looking forward to hearing from you soon! 📩</description>
+    </item>
+    
+    <item>
+      <title>Journey</title>
+      <link>https://saral-hugo-theme.pages.dev/journey/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      
+      <guid>https://saral-hugo-theme.pages.dev/journey/</guid>
+      <description>🚀 Journey Welcome to the Journey page, a space to unfold and showcase the timelines of your professional or personal adventures.
+With a simple YAML file and the magic of custom shortcodes, you can effortlessly breathe life into your journey. Just provide your data, utilize the custom shortcode, and voilà – your narrative takes flight.
+Let&amp;rsquo;s embark on this journey together! 🌟
+🎓 Education :   Bachelor of Technology (B.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://saral-hugo-theme.pages.dev/impressum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://saral-hugo-theme.pages.dev/impressum/</guid>
+      <description>Impressum Anbieter: Lukas Mayr
+Bühler 22
+39040 Barbian
+Kontakt: Telefon: 3472485080
+E-Mail: lukas.mayr01@gmail.com
+Website: www.lukasmayr.tech
+ Hinweise Es wird ausdrücklich darauf hingewiesen, dass wir für Seiten, die von dieser Webseite aus verlinkt sind, keinerlei Einfluss auf die dort publizierten Inhalte oder die Gestaltung haben. Wir übernehmen somit keinerlei Haftung oder Garantieren für die Inhalte der verlinkten Seiten. Wir distanzieren uns ausdrücklich von der zum Ausdruck gebrachten Meinung auf diesen Seiten, da diese nicht in jedem Fall unserer Meinung entsprechen kann.</description>
+    </item>
+    
   </channel>
 </rss>
