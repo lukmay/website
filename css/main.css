@@ -129,6 +129,7 @@ header {
   display: flex; /* Flex layout for the items inside the header */
   align-items: center; /* Center items vertically */
   z-index: 999;
+  position: fixed;
 }
 
 header.hidden {
