@@ -397,7 +397,7 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
 }
 
 /* Media Query for Smaller Screens */
-@media (max-width: 1160px) {
+@media (max-width: 1340px) {
   .hero {
     height: auto; /* Adjust height for smaller screens */
     padding-top: 100px; /* More padding at the top */
@@ -437,6 +437,22 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
     font-size: 0.97em;
     font-weight: 900;
   }
+
+  @media (max-width: 1340px) {
+
+    .hero h1 {
+      font-size: 2.1em;
+      font-weight: 900;
+    }
+    
+    .hero h2 {
+      font-size: 0.78em;
+      font-weight: 900;
+    }
+
+
+  }
+
 }
 
 /* Tags and Posts Section */
