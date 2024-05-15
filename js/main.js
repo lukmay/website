@@ -21,4 +21,27 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.removeItem("theme");
     }
   });
+
+  // navbar IOS problem
+  var lastScrollTop = 0;
+  var navbar = document.querySelector("header");
+
+  window.addEventListener("scroll", function () {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // Scrolling down
+      navbar.classList.remove("visible");
+      navbar.classList.add("hidden");
+    } else {
+      // Scrolling up
+      navbar.classList.remove("hidden");
+      navbar.classList.add("visible");
+    }
+    if (scrollTop === 0) {
+      // At the top of the page
+      navbar.classList.add("visible");
+    }
+    lastScrollTop = scrollTop;
+  });
 });

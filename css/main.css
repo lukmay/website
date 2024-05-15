@@ -146,11 +146,13 @@ header {
 }
 
 header.hidden {
-  top: -100%; /* Move the header out of view */
+  top: -100%;
+  transition: top 0.3s ease-in-out;
 }
 
 header.visible {
-  top: 0; /* Position the header at the top of the viewport */
+  top: 0;
+  transition: top 0.3s ease-in-out;
 }
 
 .navbar {
