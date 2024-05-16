@@ -17,15 +17,6 @@
     </item>
     
     <item>
-      <title>Markdown Demo</title>
-      <link>https://lukasmayr.tech/posts/markdown-demo/</link>
-      <pubDate>Tue, 07 Nov 2023 08:36:15 +0300</pubDate>
-      
-      <guid>https://lukasmayr.tech/posts/markdown-demo/</guid>
-      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Projects</title>
       <link>https://lukasmayr.tech/project/</link>
       <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
