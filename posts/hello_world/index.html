@@ -16,7 +16,7 @@
   </head>
   <body>
     <header><head>
-    
+  
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y0FF3X59QE"></script>
 <script>
 var doNotTrack = false;
@@ -27,8 +27,7 @@ if (!doNotTrack) {
 	gtag('config', 'G-Y0FF3X59QE', { 'anonymize_ip': false });
 }
 </script>
-
-    
+ 
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -72,6 +71,7 @@ if (!doNotTrack) {
     </ul>
   </div>
 </nav>
+
 </header>
 
     
@@ -102,7 +102,26 @@ if (!doNotTrack) {
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus et molestie ac feugiat sed lectus vestibulum mattis. Lectus urna duis convallis convallis.</p>
 <h2 id="sollicitudin">Sollicitudin</h2>
 <p>Sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula. Eget felis eget nunc lobortis mattis aliquam faucibus purus. Nunc lobortis mattis aliquam faucibus purus in. Morbi blandit cursus risus at ultrices mi tempus imperdiet nulla. Sodales neque sodales ut etiam sit amet nisl purus. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper eget. Vel orci porta non pulvinar. Non quam lacus suspendisse faucibus interdum.</p>
-<h2 id="id-aliquet-risus">Id aliquet risus</h2>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f"># Define the network (0 = A, 1 = B, 2 = C)</span>
+links = {
+    <span style="color:#ff0;font-weight:bold">0</span>: [<span style="color:#ff0;font-weight:bold">1</span>, <span style="color:#ff0;font-weight:bold">2</span>],  <span style="color:#007f7f"># A links to B and C</span>
+    <span style="color:#ff0;font-weight:bold">1</span>: [<span style="color:#ff0;font-weight:bold">0</span>],     <span style="color:#007f7f"># B links to A</span>
+    <span style="color:#ff0;font-weight:bold">2</span>: [<span style="color:#ff0;font-weight:bold">1</span>]      <span style="color:#007f7f"># C links to B}</span>
+
+<span style="color:#fff;font-weight:bold">def</span> calculate_transition_matrix(links, damping_factor=<span style="color:#ff0;font-weight:bold">0.85</span>):
+    n = <span style="color:#fff;font-weight:bold">len</span>(links)
+    P = np.zeros((n, n))
+
+    <span style="color:#fff;font-weight:bold">for</span> i in <span style="color:#fff;font-weight:bold">range</span>(n):
+        <span style="color:#fff;font-weight:bold">for</span> j in <span style="color:#fff;font-weight:bold">range</span>(n):
+            <span style="color:#fff;font-weight:bold">if</span> j in links[i]:
+                P[i][j] = damping_factor / <span style="color:#fff;font-weight:bold">len</span>(links[i])
+            P[i][j] += (<span style="color:#ff0;font-weight:bold">1</span> - damping_factor) / n
+
+    <span style="color:#fff;font-weight:bold">return</span> P
+
+P = calculate_transition_matrix(links)
+</code></pre></div><h2 id="id-aliquet-risus">Id aliquet risus</h2>
 <p>feugiat in ante metus dictum. Sapien nec sagittis aliquam malesuada bibendum. Dignissim cras tincidunt lobortis feugiat vivamus at. Faucibus in ornare quam viverra. Malesuada proin libero nunc consequat interdum varius sit. Sed risus ultricies tristique nulla aliquet enim. Faucibus nisl tincidunt eget nullam non nisi est. Tincidunt augue interdum velit euismod in pellentesque. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices dui. Posuere urna nec tincidunt praesent semper feugiat nibh sed. Pretium fusce id velit ut tortor. Scelerisque varius morbi enim nunc faucibus a pellentesque. Quis imperdiet massa tincidunt nunc pulvinar sapien. Arcu odio ut sem nulla pharetra diam. Sit amet risus nullam eget felis. Quis vel eros donec ac odio. Et ultrices neque ornare aenean euismod elementum nisi.</p>
 <h3 id="ullamcorper-morbi">Ullamcorper morbi</h3>
 <p>tincidunt ornare massa eget. Quam vulputate dignissim suspendisse in. Sit amet commodo nulla facilisi nullam vehicula ipsum. Lacus sed viverra tellus in hac habitasse platea. Aliquam id diam maecenas ultricies mi eget mauris. Amet porttitor eget dolor morbi non arcu. Turpis egestas sed tempus urna et. Turpis in eu mi bibendum neque. Varius quam quisque id diam. Non nisi est sit amet facilisis. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Varius morbi enim nunc faucibus a pellentesque. Sit amet purus gravida quis blandit turpis. Etiam non quam lacus suspendisse faucibus interdum posuere lorem. Dignissim suspendisse in est ante in nibh. Pharetra diam sit amet nisl suscipit adipiscing.</p>

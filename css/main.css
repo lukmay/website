@@ -16,8 +16,6 @@
   --navbar-height: 70px; /* We can use this to define padding for many elements. */
   --menu-button-width: 32px;
   --menu-button-height: 4px;
-  --shadow-one: #c2ccdf; /* Adjusted for dark mode */
-  --shadow-two: rgba(255, 255, 255, 0.15);
 
   /* neon effect */
   --text-color: #ffffff;
@@ -25,12 +23,12 @@
 
   /* Blog-Post shadows */
   --shadow-color-normal: rgba(
-    255,
-    255,
-    255,
-    0.144
+    0,
+    0,
+    0,
+    0.822
   ); /* Heller Schatten für dunklen Hintergrund */
-  --shadow-color-hover: #add8e633; /* Hellerer Schatten für Hover-Effekt */
+  --shadow-color-hover: #082129c5; /* Hellerer Schatten für Hover-Effekt */
 }
 
 :root.light-mode {
@@ -40,8 +38,6 @@
   --note-color: rgb(250, 115, 115);
   --heading-color: #233044;
   --container-border-color: #454963;
-  --shadow-one: #454963;
-  --shadow-two: rgba(27, 31, 35, 0.15);
   --text-color: #454963; /* We can use this to define padding for many elements. */
 
   /* neon effect */
@@ -906,27 +902,39 @@ blockquote {
   }
 }
 
+/* Remove padding and margin from parent containers */
+.highlight,
+.highlight pre {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
+
 /* Code Blocks */
 pre,
 code,
 .highlight {
   background-color: #0d1117;
-  color: white;
+  color: #c9d1d9;
+  font-family: "Ubuntu Mono", monospace;
+  border: none; /* Remove border */
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 4px 8px var(--shadow-color-normal); /* Add subtle shadow */
 }
 
 pre {
-  border-radius: 0.5em;
-  padding: 20px;
   position: relative;
   overflow-x: auto;
 }
 
 code {
   padding: 2px 6px;
+  font-size: 0.9em;
 }
 
 .highlight {
-  border-radius: 0.5em;
   overflow-x: auto;
   position: relative;
 }
@@ -941,6 +949,33 @@ code {
   border: 2px solid var(--accent-color);
   border-radius: 5px;
   cursor: pointer;
+}
+
+pre code {
+  display: block;
+  line-height: 1.5em;
+  font-size: 1em;
+}
+
+.line-numbers {
+  padding-left: 3.8em;
+  position: relative;
+}
+
+.line-numbers code {
+  counter-reset: line;
+}
+
+.line-numbers code:before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 2em;
+  margin-left: -2.8em;
+  text-align: right;
+  color: #6a737d;
+  font-size: 0.875em;
+  user-select: none;
 }
 
 .timeline-area {
