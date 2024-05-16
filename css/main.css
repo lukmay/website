@@ -909,13 +909,14 @@ blockquote {
   margin: 0;
   border: none;
   box-shadow: none;
+  background-color: #0d1117;
+  color: #0d1117;
 }
 
 /* Code Blocks */
 pre,
-code,
 .highlight {
-  background-color: #0d1117;
+  background-color: #0d1117 !important;
   color: #c9d1d9;
   font-family: "Ubuntu Mono", monospace;
   border: none; /* Remove border */
