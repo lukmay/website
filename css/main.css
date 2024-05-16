@@ -493,15 +493,15 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
 }
 
 .tags div span {
-  border-radius: 100px;
-  box-shadow: var(--container-border-color) 0px 1px 3px 0px,
+  border-radius: 0px;
+  box-shadow: var(--container-border-color) 0px 1px 0px 0px,
     var(--secondary-color) 0px 0px 0px 0px;
   padding: 4px 8px;
   font-size: large;
 }
 
 .tags div span:hover {
-  box-shadow: var(--container-border-color) 0px 2px 4px 0px;
+  box-shadow: var(--container-border-color) 0px 2px 0px 0px;
 }
 
 .tags div span a,
