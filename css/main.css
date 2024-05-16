@@ -632,10 +632,11 @@ figcaption {
 .post-tags span a {
   color: var(--secondary-color);
   text-decoration: none;
-  box-shadow: var(--container-border-color) 0px 1px 3px 0px,
-    var(--secondary-color) 0px 0px 0px 1px;
-  padding: 5px 10px;
-  border-radius: 8px;
+  box-shadow: var(--container-border-color) 0px 1px 0px 0px,
+    var(--secondary-color) 0px 0px 0px 0px;
+  padding: 2px 10px;
+  margin: 0px 5px;
+  border-radius: 0px;
 }
 
 .post {
