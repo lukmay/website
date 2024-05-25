@@ -586,6 +586,7 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
 
 .post p {
   color: var(--text-color);
+  word-spacing: 0.2em; /* Increase the gap between words */
 }
 
 .post img {
@@ -904,26 +905,17 @@ blockquote {
 }
 
 /* Remove padding and margin from parent containers */
-.highlight,
-.highlight pre {
-  padding: 0;
-  margin: 0;
-  border: none;
-  box-shadow: none;
-  background-color: #0d1117;
-  color: #0d1117;
-}
 
 /* Code Blocks */
-pre,
-.highlight {
-  background-color: #0d1117 !important;
-  color: #c9d1d9;
-  font-family: "Ubuntu Mono", monospace;
-  border: none; /* Remove border */
-  border-radius: 6px;
+pre{
+  border-radius: 9px;
   padding: 20px;
-  box-shadow: 0 4px 8px var(--shadow-color-normal); /* Add subtle shadow */
+  box-shadow: 0 2px 4px var(--shadow-color-normal); /* Add subtle shadow */
+}
+
+.highlight {
+  /* overflow-x: auto; */
+  position: relative;
 }
 
 pre {
@@ -932,14 +924,12 @@ pre {
 }
 
 code {
-  padding: 2px 6px;
+  padding: 20px 30px;
   font-size: 0.9em;
+  font-family: "Cascadia Code", monospace;
 }
 
-.highlight {
-  overflow-x: auto;
-  position: relative;
-}
+
 
 .copy-code {
   position: absolute;
