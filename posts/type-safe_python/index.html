@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html
+  lang="en-us"
+  dir="ltr"
+>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<title>
+  Type-Safe Programming in Python | Lukas Mayr
+</title>
+
+<link rel="stylesheet" href="/css/main.css" />
+
+
+  </head>
+  <body>
+    <header><head>
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y0FF3X59QE"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-Y0FF3X59QE', { 'anonymize_ip': false });
+}
+</script>
+ 
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-Y0FF3X59QE', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+<nav class="navbar">
+  <a href="/">
+    
+    <p class="logo">Lukas Mayr</p>
+  </a>
+<input type="checkbox" id="overlay-input" />
+<label for="overlay-input" id="overlay-button"><span></span></label>
+  <div id="overlay">
+    <ul>
+
+    <li>
+      <a href="/">Home</a>
+    </li>
+
+    <li>
+      <a href="/posts/">Blog</a>
+    </li>
+
+    <li>
+      <a href="/project/">Projects</a>
+    </li>
+
+    <li>
+      <a href="/contact/">Contact</a>
+    </li>
+  
+      <li><button id="mode-toggle">☀️</button></li>
+    </ul>
+  </div>
+</nav>
+
+</header>
+
+    
+
+<main class="main-content">
+   <section class="meta-heading">
+  <h1>Type-Safe Programming in Python</h1>
+  <span>
+      
+    <time datetime="2024-06-01T09:30:00&#43;02:00">June 1, 2024</time>
+     
+<div class="post-tags">
+  <div>
+    
+    <span>
+      <a href="/tags/all-posts/">all posts</a>
+    </span>
+    <span>
+      <a href="/tags/blog/">blog</a>
+    </span>
+    <span>
+      <a href="/tags/guide/">guide</a>
+    </span>
+  </div>
+</div>
+
+  </span>
+</section>
+
+  <section class="post">
+    <p>Python is celebrated for its simplicity and flexibility, but these features come with a trade-off: a lack of built-in type safety.
+This can lead to bugs that are hard to track down, especially in large codebases. Fortunately, Python 3.5 introduced type hints, which can be enforced using tools like Mypy to bring type safety to your code. In this post, we&rsquo;ll explore how to leverage type annotations and Mypy to write more reliable Python code.</p>
+<h2 id="what-is-type-safety">What is Type Safety?</h2>
+<p>Type safety ensures that variables in your program are only used in ways that are compatible with their types. For example, if you declare a variable as an integer, type safety ensures you don&rsquo;t accidentally use it as a string or a list, preventing many common bugs at compile-time rather than at runtime.</p>
+<hr>
+<h2 id="why-use-type-annotations-in-python">Why Use Type Annotations in Python?</h2>
+<ul>
+<li><strong>Error Detection</strong>: Catch type-related errors before running your code.</li>
+<li><strong>Documentation</strong>: Make your code more readable and self-documenting.</li>
+<li><strong>IDE Support</strong>: Improved code completion and inspection in modern IDEs.</li>
+<li><strong>Refactoring</strong>: Safer and easier refactoring.</li>
+</ul>
+<hr>
+<h2 id="introducing-type-annotations">Introducing Type Annotations</h2>
+<p>Type annotations in Python are a way to explicitly declare the type of a variable. Here’s a simple example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#81a1c1;font-weight:bold">def</span> <span style="color:#88c0d0">add</span><span style="color:#eceff4">(</span>a<span style="color:#eceff4">:</span> <span style="color:#81a1c1">int</span><span style="color:#eceff4">,</span> b<span style="color:#eceff4">:</span> <span style="color:#81a1c1">int</span><span style="color:#eceff4">)</span> <span style="color:#81a1c1">-&gt;</span> <span style="color:#81a1c1">int</span><span style="color:#eceff4">:</span>
+   <span style="color:#81a1c1;font-weight:bold">return</span> a <span style="color:#81a1c1">+</span> b
+
+</code></pre></div><p>In this function, <code>a</code> and <code>b</code> are annotated as integers, and the function is expected to return an integer.</p>
+<hr>
+<h2 id="common-type-annotations">Common Type Annotations</h2>
+<ul>
+<li><strong>Basic Types</strong>: <code>int</code>, <code>float</code>, <code>str</code>, <code>bool</code></li>
+<li><strong>Collections</strong>: <code>List[int]</code>, <code>Dict[str, int]</code>, <code>Tuple[int, str]</code></li>
+<li><strong>Optional Types</strong>: <code>Optional[int]</code> (which is shorthand for <code>Union[int, None]</code>)</li>
+<li><strong>Custom Types</strong>: You can define your own types using classes and then use them in type annotations.</li>
+</ul>
+<hr>
+<h2 id="using-mypy-for-type-checking">Using Mypy for Type Checking</h2>
+<p>Mypy is a static type checker for Python. It checks your code against the type annotations you&rsquo;ve written and reports any mismatches.</p>
+<ol>
+<li>
+<p><strong>Installation</strong>: You can install Mypy using pip:</p>
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install mypy
+</code></pre></div></li>
+<li>
+<p><strong>Running Mypy</strong>: To check your code, simply run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mypy your_script.py
+</code></pre></div></li>
+<li>
+<p><strong>Configuring Mypy</strong>: You can configure Mypy using a <code>mypy.ini</code> file for more complex projects.</p>
+</li>
+</ol>
+<hr>
+<h2 id="example-type-checked-python-code">Example: Type-Checked Python Code</h2>
+<p>Let&rsquo;s consider a more comprehensive example. Suppose you are writing a function that processes a list of user data.</p>
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#81a1c1;font-weight:bold">from</span> <span style="color:#8fbcbb">typing</span> <span style="color:#81a1c1;font-weight:bold">import</span> List<span style="color:#eceff4">,</span> Dict
+
+<span style="color:#81a1c1;font-weight:bold">def</span> <span style="color:#88c0d0">process_users</span><span style="color:#eceff4">(</span>users<span style="color:#eceff4">:</span> List<span style="color:#eceff4">[</span>Dict<span style="color:#eceff4">[</span><span style="color:#81a1c1">str</span><span style="color:#eceff4">,</span> <span style="color:#81a1c1">str</span><span style="color:#eceff4">]])</span> <span style="color:#81a1c1">-&gt;</span> <span style="color:#81a1c1;font-weight:bold">None</span><span style="color:#eceff4">:</span>
+    <span style="color:#81a1c1;font-weight:bold">for</span> user <span style="color:#81a1c1;font-weight:bold">in</span> users<span style="color:#eceff4">:</span>
+        <span style="color:#81a1c1">print</span><span style="color:#eceff4">(</span><span style="color:#a3be8c">f</span><span style="color:#a3be8c">&#34;User </span><span style="color:#a3be8c">{</span>user<span style="color:#eceff4">[</span><span style="color:#a3be8c">&#39;name&#39;</span><span style="color:#eceff4">]</span><span style="color:#a3be8c">}</span><span style="color:#a3be8c"> has email </span><span style="color:#a3be8c">{</span>user<span style="color:#eceff4">[</span><span style="color:#a3be8c">&#39;email&#39;</span><span style="color:#eceff4">]</span><span style="color:#a3be8c">}</span><span style="color:#a3be8c">&#34;</span><span style="color:#eceff4">)</span>
+
+<span style="color:#616e87;font-style:italic"># Example usage</span>
+users <span style="color:#81a1c1">=</span> <span style="color:#eceff4">[{</span><span style="color:#a3be8c">&#39;name&#39;</span><span style="color:#eceff4">:</span> <span style="color:#a3be8c">&#39;Alice&#39;</span><span style="color:#eceff4">,</span> <span style="color:#a3be8c">&#39;email&#39;</span><span style="color:#eceff4">:</span> <span style="color:#a3be8c">&#39;alice@example.com&#39;</span><span style="color:#eceff4">},</span> <span style="color:#eceff4">{</span><span style="color:#a3be8c">&#39;name&#39;</span><span style="color:#eceff4">:</span> <span style="color:#a3be8c">&#39;Bob&#39;</span><span style="color:#eceff4">,</span> <span style="color:#a3be8c">&#39;email&#39;</span><span style="color:#eceff4">:</span> <span style="color:#a3be8c">&#39;bob@example.com&#39;</span><span style="color:#eceff4">}]</span>
+process_users<span style="color:#eceff4">(</span>users<span style="color:#eceff4">)</span>
+</code></pre></div><p>You can run Mypy to check this script:</p>
+<p><code>mypy script.py</code></p>
+<p>If there are any type mismatches, Mypy will report them.</p>
+<hr>
+<h2 id="mypy--visual-studio-code--3">Mypy + Visual Studio Code = &lt;3</h2>
+<p><img src="VSCode_plug.png" alt="VSCode Extenstion Install Button"></p>
+<p>For me the best way to make use of the huge benefits type hints provide us is to use <code>mypy</code> directly in Visual Studio Code. Its as easy as searching the plugin &ldquo;Mypy&rdquo; in the plugin section and installing it.
+(Make suer to already have <code>mypy</code> installed via <code>pip</code> as described earlier in this post)</p>
+
+
+
+
+<img src="VSCode_Settings.png" alt="VSCode_Settings" class="medium">
+
+<p>To force yourself in new projects to always use type annotations in your code i really like to add the following additional flags to the Plugin via the settings page in VS-Code:</p>
+<ul>
+<li><strong>&ldquo;strict&rdquo;</strong>: This flag ensures that Mypy will enforce stricter type checking, which can catch more potential issues and enforce better type discipline.</li>
+<li><strong>&ldquo;disallow_untyped_calls&rdquo;</strong>: This flag will make Mypy flag any calls to functions without type annotations, encouraging you to ensure every function has proper type hints.</li>
+<li><strong>&ldquo;disallow_untyped_defs&rdquo;</strong>: This setting ensures that all functions within your code must have type annotations, preventing you from accidentally leaving them out.</li>
+<li><strong>&ldquo;disallow_incomplete_defs&rdquo;</strong>: This flag requires that all function definitions are complete with both argument and return type annotations.</li>
+</ul>
+<hr>
+<h2 id="advanced-type-annotations">Advanced Type Annotations</h2>
+<ul>
+<li>
+<p><strong>Generics</strong>: You can define generic types using the <code>TypeVar</code> and <code>Generic</code> classes.</p>
+</li>
+<li>
+<p><strong>Type Aliases</strong>: Simplify complex type definitions with aliases.</p>
+<div class="highlight"><pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    <span style="color:#81a1c1;font-weight:bold">from</span> <span style="color:#8fbcbb">typing</span> <span style="color:#81a1c1;font-weight:bold">import</span> List<span style="color:#eceff4">,</span> Dict
+
+    User <span style="color:#81a1c1">=</span> Dict<span style="color:#eceff4">[</span><span style="color:#81a1c1">str</span><span style="color:#eceff4">,</span> <span style="color:#81a1c1">str</span><span style="color:#eceff4">]</span>
+    UsersList <span style="color:#81a1c1">=</span> List<span style="color:#eceff4">[</span>User<span style="color:#eceff4">]</span>
+
+    <span style="color:#81a1c1;font-weight:bold">def</span> <span style="color:#88c0d0">process_users</span><span style="color:#eceff4">(</span>users<span style="color:#eceff4">:</span> UsersList<span style="color:#eceff4">)</span> <span style="color:#81a1c1">-&gt;</span> <span style="color:#81a1c1;font-weight:bold">None</span><span style="color:#eceff4">:</span>
+      <span style="color:#616e87;font-style:italic"># same implementation</span>
+</code></pre></div></li>
+<li>
+<p><strong>Callable Types</strong>: Specify types for functions that are passed around as arguments.</p>
+</li>
+</ul>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>Type-safe programming in Python using type annotations and Mypy can significantly enhance the robustness and maintainability of your code. By catching type errors early, you save time debugging and ensure that your programs behave as expected.</p>
+<hr>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li><a href="http://mypy-lang.org/">Mypy Documentation</a></li>
+<li><a href="https://www.python.org/dev/peps/pep-0484/">PEP 484 – Type Hints</a></li>
+<li><a href="https://docs.python.org/3/library/typing.html">Python Typing Module</a></li>
+</ul> 
+  </section>
+  
+</main>
+
+
+    <footer><p> <a href="/impressum"> Impressum</a></a> <br>&copy; 2024 <a href="https://lukasmayr.tech">Lukas Mayr</a> </p>
+
+<script src="/js/main.js"></script>
+<script>
+  var prevScrollPos = window.pageYOffset;
+  var checkBox = document.getElementById("overlay-input");
+
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    var header = document.getElementsByTagName("header")[0];
+
+    if (prevScrollPos > currentScrollPos) {
+      header.classList.add("visible");
+      header.classList.remove("hidden");
+    } else {
+      header.classList.add("hidden");
+      header.classList.remove("visible");
+      checkBox.checked = false;
+    }
+    prevScrollPos = currentScrollPos;
+  };
+</script>
+<script>
+  
+  document.querySelectorAll("pre > code").forEach((codeblock) => {
+    const container = codeblock.parentNode.parentNode;
+
+    const copybutton = document.createElement("button");
+    copybutton.classList.add("copy-code");
+    copybutton.innerText = 'copy';
+
+    function copyingDone() {
+      copybutton.innerText = 'copied!';
+      setTimeout(() => {
+        copybutton.innerText = 'copy';
+      }, 2000);
+    }
+
+    copybutton.addEventListener("click", (cb) => {
+      if ("clipboard" in navigator) {
+        navigator.clipboard.writeText(codeblock.textContent);
+        copyingDone();
+        return;
+      }
+
+      const range = document.createRange();
+      range.selectNodeContents(codeblock);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      try {
+        document.execCommand("copy");
+        copyingDone();
+      } catch (e) {}
+      selection.removeRange(range);
+    });
+
+    if (container.classList.contains("highlight")) {
+      container.appendChild(copybutton);
+    } else if (container.parentNode.firstChild == container) {
+      
+    } else if (
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode
+        .nodeName == "TABLE"
+    ) {
+      
+      codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(
+        copybutton
+      );
+    } else {
+      
+      codeblock.parentNode.appendChild(copybutton);
+    }
+  });
+</script>
+
+</footer>
+  </body>
+</html>

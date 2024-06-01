@@ -16,6 +16,7 @@
   --navbar-height: 70px; /* We can use this to define padding for many elements. */
   --menu-button-width: 32px;
   --menu-button-height: 4px;
+  --code-background-color: #364c66;
 
   /* neon effect */
   --text-color: #ffffff;
@@ -39,6 +40,7 @@
   --heading-color: #233044;
   --container-border-color: #454963;
   --text-color: #454963; /* We can use this to define padding for many elements. */
+  --code-background-color: #e4f0ff;
 
   /* neon effect */
   --text-color: #414141;
@@ -521,6 +523,44 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
   box-shadow: 0 20px 20px var(--shadow-color-hover); /* Vergrößert den Schatten für den 3D-Effekt, Farbe abhängig von Modus */
 }
 
+/* Post Styling */
+/* Post Styling */
+section.post h1 {
+  font-size: 2.5em;
+}
+
+section.post h2 {
+  font-size: 2em;
+}
+
+section.post h3 {
+  font-size: 1.75em;
+}
+
+section.post h4 {
+  font-size: 1.5em;
+}
+
+section.post h5 {
+  font-size: 1.25em;
+}
+
+section.post h6 {
+  font-size: 1em;
+}
+
+section.post h1,
+section.post h2,
+section.post h3,
+section.post h4,
+section.post h5,
+section.post h6 {
+  color: var(--heading-color);
+  margin: 20px 0;
+  font-weight: normal;
+  font-family: "Plus Jakarta Sans", monospace;
+}
+
 /* Post list on smaller screens */
 @media (max-width: 1340px) {
   .post-element h2 {
@@ -595,8 +635,22 @@ input[type="checkbox"]:checked ~ #overlay-button span:after {
   width: 100%;
   border-radius: 1em;
 }
-.post .medium {
-  width: 60%;
+
+/* Medium size Images */
+@media (min-width: 1200px) {
+  .post .medium {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .post .medium {
+    width: 80%;
+  }
+}
+
+@media (max-width: 767px) {
+  /* No changes to width */
 }
 .meta-heading {
   border-bottom: 0.5px solid var(--container-border-color);
@@ -907,29 +961,26 @@ blockquote {
 /* Remove padding and margin from parent containers */
 
 /* Code Blocks */
-pre{
+pre {
   border-radius: 9px;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0 2px 4px var(--shadow-color-normal); /* Add subtle shadow */
 }
 
 .highlight {
   /* overflow-x: auto; */
+  margin: 3%;
   position: relative;
-}
-
-pre {
-  position: relative;
-  overflow-x: auto;
 }
 
 code {
-  padding: 20px 30px;
   font-size: 0.9em;
   font-family: "Cascadia Code", monospace;
+  font-style: italic;
+  background-color: var(--code-background-color);
+  border-radius: 5px;
+  padding: 2px;
 }
-
-
 
 .copy-code {
   position: absolute;
@@ -943,31 +994,18 @@ code {
   cursor: pointer;
 }
 
+pre {
+  position: relative;
+  overflow-x: auto;
+}
+
 pre code {
+  background-color: #2e3440; /* Nord theme background color */
+  color: #d8dee9; /* Nord theme text color */
   display: block;
   line-height: 1.5em;
+  font-style: normal;
   font-size: 1em;
-}
-
-.line-numbers {
-  padding-left: 3.8em;
-  position: relative;
-}
-
-.line-numbers code {
-  counter-reset: line;
-}
-
-.line-numbers code:before {
-  counter-increment: line;
-  content: counter(line);
-  display: inline-block;
-  width: 2em;
-  margin-left: -2.8em;
-  text-align: right;
-  color: #6a737d;
-  font-size: 0.875em;
-  user-select: none;
 }
 
 .timeline-area {

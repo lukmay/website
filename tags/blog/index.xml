@@ -6,14 +6,15 @@
     <description>Recent content in blog on Lukas Mayr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Apr 2024 18:13:27 +0200</lastBuildDate><atom:link href="https://lukasmayr.tech/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Jun 2024 09:30:00 +0200</lastBuildDate><atom:link href="https://lukasmayr.tech/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello World!</title>
-      <link>https://lukasmayr.tech/posts/hello_world/</link>
-      <pubDate>Mon, 29 Apr 2024 18:13:27 +0200</pubDate>
+      <title>Type-Safe Programming in Python</title>
+      <link>https://lukasmayr.tech/posts/type-safe_python/</link>
+      <pubDate>Sat, 01 Jun 2024 09:30:00 +0200</pubDate>
       
-      <guid>https://lukasmayr.tech/posts/hello_world/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus et molestie ac feugiat sed lectus vestibulum mattis. Lectus urna duis convallis convallis.&lt;/p&gt;</description>
+      <guid>https://lukasmayr.tech/posts/type-safe_python/</guid>
+      <description>&lt;p&gt;Python is celebrated for its simplicity and flexibility, but these features come with a trade-off: a lack of built-in type safety.
+This can lead to bugs that are hard to track down, especially in large codebases. Fortunately, Python 3.5 introduced type hints, which can be enforced using tools like Mypy to bring type safety to your code. In this post, we&amp;rsquo;ll explore how to leverage type annotations and Mypy to write more reliable Python code.&lt;/p&gt;</description>
     </item>
     
   </channel>
