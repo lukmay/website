@@ -14,7 +14,7 @@
       
       <guid>https://lukasmayr.tech/posts/type-safe_python/</guid>
       <description>&lt;p&gt;Python is celebrated for its simplicity and flexibility, but these features come with a trade-off: a lack of built-in type safety.
-This can lead to bugs that are hard to track down, especially in large codebases. Fortunately, Python 3.5 introduced type hints, which can be enforced using tools like Mypy to bring type safety to your code. In this post, we&amp;rsquo;ll explore how to leverage type annotations and Mypy to write more reliable Python code.&lt;/p&gt;</description>
+This can lead to bugs that are hard to track down, especially in large codebases.&lt;/p&gt;</description>
     </item>
     
     <item>
