@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
 <title>
-  404 Page not found | Lukas Mayr
+  Gallery | Lukas Mayr
 </title>
 
 <link rel="stylesheet" href="/css/main.css" />
@@ -48,11 +48,106 @@
 </header>
 
     
+
 <main class="main-content">
-  <section class="error">
-    <h1>Page Not Found</h1>
-  </section>
+  
+    <main class="gallery">
+  <h1>Gallery</h1>
+
+  <div class="gallery-grid">
+    
+    
+      <a
+        class="gallery-item"
+        name="image1"
+        id="image1"
+        href="#image1"
+        style="grid-column: span 2; 
+               grid-row: span 2;">
+        <img
+          src="/images/avatar.jpg"
+          alt="A stunning sunset."
+          class="gallery-thumbnail"
+          data-large="/images/avatar.jpg"
+          data-desc='A stunning sunset.'
+        >
+        
+          <div class="image-description">A stunning sunset.</div>
+        
+      </a>
+    
+      <a
+        class="gallery-item"
+        name="image2"
+        id="image2"
+        href="#image2"
+        style="grid-column: span 1; 
+               grid-row: span 1;">
+        <img
+          src="/images/avatar.jpg"
+          alt="A serene mountain view."
+          class="gallery-thumbnail"
+          data-large="/images/avatar.jpg"
+          data-desc='A serene mountain view.'
+        >
+        
+          <div class="image-description">A serene mountain view.</div>
+        
+      </a>
+    
+      <a
+        class="gallery-item"
+        name="image3"
+        id="image3"
+        href="#image3"
+        style="grid-column: span 1; 
+               grid-row: span 1;">
+        <img
+          src="/images/avatar.jpg"
+          alt="A peaceful lake."
+          class="gallery-thumbnail"
+          data-large="/images/avatar.jpg"
+          data-desc='A peaceful lake.'
+        >
+        
+          <div class="image-description">A peaceful lake.</div>
+        
+      </a>
+    
+      <a
+        class="gallery-item"
+        name="image4"
+        id="image4"
+        href="#image4"
+        style="grid-column: span 2; 
+               grid-row: span 2;">
+        <img
+          src="/images/avatar.jpg"
+          alt="Rolling hills at sunrise."
+          class="gallery-thumbnail"
+          data-large="/images/avatar.jpg"
+          data-desc='Rolling hills at sunrise.'
+        >
+        
+          <div class="image-description">Rolling hills at sunrise.</div>
+        
+      </a>
+    
+  </div>
+
+  
+  <div id="image-modal" class="modal">
+    <div class="modal-content-box">
+      <span class="modal-close">&times;</span>
+      <img class="modal-content" id="modal-image" alt="">
+      <div class="modal-description" id="modal-description"></div>
+    </div>
+  </div>
 </main>
+
+  
+</main>
+
 
 
     <footer><p> <a href="/impressum"> Impressum</a></a> <br>&copy; 2025 <a href="https://lukas-mayr.com">Lukas Mayr</a> </p>

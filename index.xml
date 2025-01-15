@@ -2,45 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Lukas Mayr</title>
-    <link>https://lukas-mayr.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in Home on Lukas Mayr</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 01 Jun 2024 09:30:00 +0200</lastBuildDate>
-    <atom:link href="https://lukas-mayr.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Type-Safe Programming in Python</title>
-      <link>https://lukas-mayr.com/posts/type-safe_python/</link>
+      <link>http://localhost:1313/posts/type-safe_python/</link>
       <pubDate>Sat, 01 Jun 2024 09:30:00 +0200</pubDate>
-      <guid>https://lukas-mayr.com/posts/type-safe_python/</guid>
+      <guid>http://localhost:1313/posts/type-safe_python/</guid>
       <description>&lt;p&gt;Python is celebrated for its simplicity and flexibility, but these features come with a trade-off: a lack of built-in type safety.&#xA;This can lead to bugs that are hard to track down, especially in large codebases.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Projects</title>
-      <link>https://lukas-mayr.com/project/</link>
+      <title>Gallery</title>
+      <link>http://localhost:1313/gallery/</link>
       <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://lukas-mayr.com/project/</guid>
-      <description>&lt;h1 id=&#34;selection-of-projects&#34;&gt;Selection of Projects&lt;/h1&gt;&#xA;&lt;p&gt;In the following i would like to highlight some of the projects i have made in the past.&lt;/p&gt;&#xA;&lt;p&gt;please note that this list is under construction and will be updated soon :)&lt;/p&gt;&#xA;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA; &#xA;&lt;br /&gt;&lt;br /&gt;&#xA;&lt;hr /&gt;&#xA;&lt;div class=&#34;project-card&#34;&gt;&#xA;   &#xA;  &lt;div class=&#34;project-heading&#34;&gt;&#xA;    &lt;h2&gt;SmartBreeze&lt;/h2&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div class=&#34;project-details&#34;&gt;&#xA;    &lt;div class=&#34;description&#34;&gt;&#xA;      &lt;p&gt;A prototype smart home system employs IoT devices to monitor temperature and humidity, transmitting this data to a server. The server processes the information and controls the airflow in a building by automatically opening and closing windows using a novel pressure principle. This innovative approach adapts to any window without modifications. Developed during the &amp;#34;Servus Zukunft Hackathon&amp;#34; 2024&lt;/p&gt;</description>
+      <guid>http://localhost:1313/gallery/</guid>
+      <description>&lt;h1 id=&#34;image-gallery&#34;&gt;Image Gallery&lt;/h1&gt;</description>
     </item>
     <item>
       <title>Contact</title>
-      <link>https://lukas-mayr.com/contact/</link>
+      <link>http://localhost:1313/contact/</link>
       <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
-      <guid>https://lukas-mayr.com/contact/</guid>
+      <guid>http://localhost:1313/contact/</guid>
       <description>&lt;h1 id=&#34;get-in-touch&#34;&gt;Get in Touch!&lt;/h1&gt;&#xA;&lt;p&gt;If you have any questions, want to discuss an exciting project, or just feel like chatting about technology, feel free to reach out.&lt;/p&gt;&#xA;&lt;h3 id=&#34;reach-out-via-email&#34;&gt;Reach out via email:&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;mailto:lukas.mayr01@gmail.com&#34;&gt;Mail&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;my-social-media&#34;&gt;My social media:&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://discordapp.com/users/849913360144400404&#34;&gt;&lt;img src=&#34;https://skillicons.dev/icons?i=discord&#34; alt=&#34;Discord&#34;&gt;&lt;/a&gt;&#xA;&lt;a href=&#34;https://www.instagram.com/lukas_maxr/&#34;&gt;&lt;img src=&#34;https://skillicons.dev/icons?i=instagram&#34; alt=&#34;Instagram&#34;&gt;&lt;/a&gt;&#xA;&lt;a href=&#34;https://www.linkedin.com/in/lukas-mayr-649a99235/&#34;&gt;&lt;img src=&#34;https://skillicons.dev/icons?i=linkedin&#34; alt=&#34;Linkedin&#34;&gt;&lt;/a&gt;&#xA;&lt;a href=&#34;https://github.com/lukmay&#34;&gt;&lt;img src=&#34;https://skillicons.dev/icons?i=github&#34; alt=&#34;Github&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Looking forward to hearing from you soon! 📩&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Journey</title>
-      <link>https://lukas-mayr.com/journey/</link>
-      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
-      <guid>https://lukas-mayr.com/journey/</guid>
-      <description>&lt;h1 id=&#34;-journey&#34;&gt;🚀 Journey&lt;/h1&gt;&#xA;&lt;p&gt;Welcome to the Journey page, a space to unfold and showcase the timelines of your professional or personal adventures.&lt;/p&gt;&#xA;&lt;p&gt;With a simple YAML file and the magic of custom shortcodes, you can effortlessly breathe life into your journey. Just provide your data, utilize the custom shortcode, and voilà – your narrative takes flight.&lt;/p&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s embark on this journey together! 🌟&lt;/p&gt;&#xA;&lt;h2 id=&#34;-education-&#34;&gt;🎓 Education :&lt;/h2&gt;&#xA; &#xA;&#xA;&lt;section class=&#34;timeline-area&#34;&gt;&#xA;  &#xA;&#xA;  &lt;div&gt;&#xA;    &lt;p&gt;&lt;strong&gt; Bachelor of Technology (B. Tech) &lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
       <title></title>
-      <link>https://lukas-mayr.com/impressum/</link>
+      <link>http://localhost:1313/impressum/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lukas-mayr.com/impressum/</guid>
+      <guid>http://localhost:1313/impressum/</guid>
       <description>&lt;h1 id=&#34;impressum&#34;&gt;Impressum&lt;/h1&gt;&#xA;&lt;h2 id=&#34;anbieter&#34;&gt;Anbieter:&lt;/h2&gt;&#xA;&lt;p&gt;Lukas Mayr&lt;br&gt;&#xA;Technickerstraße 7&#xA;6020 Innsbruck&lt;/p&gt;&#xA;&lt;h2 id=&#34;kontakt&#34;&gt;Kontakt:&lt;/h2&gt;&#xA;&lt;p&gt;Telefon: 3472485080&lt;br&gt;&#xA;E-Mail: &lt;a href=&#34;mailto:lukas.mayr01@gmail.com&#34;&gt;lukas.mayr01@gmail.com&lt;/a&gt;&lt;br&gt;&#xA;Website: &lt;a href=&#34;https://www.lukas-mayr.com&#34;&gt;www.lukas-mayr.com&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;hinweise&#34;&gt;Hinweise&lt;/h2&gt;&#xA;&lt;p&gt;Es wird ausdrücklich darauf hingewiesen, dass wir für Seiten, die von dieser Webseite aus verlinkt sind, keinerlei Einfluss auf die dort publizierten Inhalte oder die Gestaltung haben. Wir übernehmen somit keinerlei Haftung oder Garantieren für die Inhalte der verlinkten Seiten. Wir distanzieren uns ausdrücklich von der zum Ausdruck gebrachten Meinung auf diesen Seiten, da diese nicht in jedem Fall unserer Meinung entsprechen kann.&lt;/p&gt;</description>
     </item>
   </channel>

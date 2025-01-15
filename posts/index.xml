@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Lukas Mayr</title>
-    <link>https://lukas-mayr.com/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on Lukas Mayr</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 01 Jun 2024 09:30:00 +0200</lastBuildDate>
-    <atom:link href="https://lukas-mayr.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Type-Safe Programming in Python</title>
-      <link>https://lukas-mayr.com/posts/type-safe_python/</link>
+      <link>http://localhost:1313/posts/type-safe_python/</link>
       <pubDate>Sat, 01 Jun 2024 09:30:00 +0200</pubDate>
-      <guid>https://lukas-mayr.com/posts/type-safe_python/</guid>
+      <guid>http://localhost:1313/posts/type-safe_python/</guid>
       <description>&lt;p&gt;Python is celebrated for its simplicity and flexibility, but these features come with a trade-off: a lack of built-in type safety.&#xA;This can lead to bugs that are hard to track down, especially in large codebases.&lt;/p&gt;</description>
     </item>
   </channel>
