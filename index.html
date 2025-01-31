@@ -20,6 +20,7 @@
    
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
+  _paq.push(['setCustomUrl', window.location.href]); 
   (function() {
     var u="https://lukasmayr.matomo.cloud/";
     _paq.push(['setTrackerUrl', u+'matomo.php']);
@@ -27,6 +28,12 @@
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.async=true; g.src='https://cdn.matomo.cloud/lukasmayr.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
   })();
+
+  
+  window.addEventListener('hashchange', function() {
+    _paq.push(['setCustomUrl', window.location.href]);
+    _paq.push(['trackPageView']);
+  });
 </script>
 
 
