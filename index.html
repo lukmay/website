@@ -4,7 +4,7 @@
   dir="ltr"
 >
   <head>
-	<meta name="generator" content="Hugo 0.142.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta name="generator" content="Hugo 0.142.0">
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
 <title>
@@ -19,21 +19,37 @@
   var _paq = window._paq = window._paq || [];
    
   _paq.push(['trackPageView']);
+   
   _paq.push(['enableLinkTracking']);
   (function() {
-    var u="https://lukasmayr.matomo.cloud/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    var u = "https://lukasmayr.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u + 'matomo.php']);
     _paq.push(['setSiteId', '1']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.src='https://cdn.matomo.cloud/lukasmayr.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+    g.async = true; g.src = 'https://cdn.matomo.cloud/lukasmayr.matomo.cloud/matomo.js'; 
+    s.parentNode.insertBefore(g, s);
   })();
 
   
   window.addEventListener('hashchange', function() {
     _paq.push(['setCustomUrl', window.location.href]); 
     _paq.push(['trackPageView']); 
+    console.log('Hash change tracked:', window.location.href);
+  });
+
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      console.log('Tracking anchor:', anchor.href); 
+      anchor.addEventListener('click', function() {
+        var hash = this.getAttribute('href');
+        console.log('Anchor clicked and event sent to Matomo:', hash); 
+        _paq.push(['trackEvent', 'Gallery', 'Anchor Click', hash]); 
+      });
+    });
   });
 </script>
+
 
 
   </head>

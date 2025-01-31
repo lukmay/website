@@ -2,32 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/all-posts/</loc>
+    <loc>https://lukas-mayr.com/tags/all-posts/</loc>
     <lastmod>2024-06-01T09:30:00+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/guide/</loc>
+    <loc>https://lukas-mayr.com/tags/guide/</loc>
     <lastmod>2024-06-01T09:30:00+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://lukas-mayr.com/tags/</loc>
     <lastmod>2024-06-01T09:30:00+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/type-safe_python/</loc>
+    <loc>https://lukas-mayr.com/posts/type-safe_python/</loc>
     <lastmod>2024-06-01T09:30:00+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/gallery/</loc>
+    <loc>https://lukas-mayr.com/gallery/</loc>
     <lastmod>2023-10-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/contact/</loc>
+    <loc>https://lukas-mayr.com/contact/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://lukas-mayr.com/posts/</loc>
     <lastmod>2023-01-01T08:30:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://lukas-mayr.com/</loc>
     <lastmod>2023-01-01T08:00:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/impressum/</loc>
+    <loc>https://lukas-mayr.com/impressum/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://lukas-mayr.com/categories/</loc>
   </url>
 </urlset>
