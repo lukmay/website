@@ -13,47 +13,10 @@
 <link rel="stylesheet" href="/css/main.css" />
 
 
-
-<script>
-  var _paq = window._paq = window._paq || [];
-   
-  _paq.push(['trackPageView']);
-   
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u = "https://lukasmayr.matomo.cloud/";
-    _paq.push(['setTrackerUrl', u + 'matomo.php']);
-    _paq.push(['setSiteId', '1']);
-    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-    g.async = true; g.src = 'https://cdn.matomo.cloud/lukasmayr.matomo.cloud/matomo.js'; 
-    s.parentNode.insertBefore(g, s);
-  })();
-
-  
-  window.addEventListener('hashchange', function() {
-    _paq.push(['setCustomUrl', window.location.href]); 
-    _paq.push(['trackPageView']); 
-    console.log('Hash change tracked:', window.location.href);
-  });
-
-  
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-      console.log('Tracking anchor:', anchor.href); 
-      anchor.addEventListener('click', function() {
-        var hash = this.getAttribute('href');
-        console.log('Anchor clicked and event sent to Matomo:', hash); 
-        _paq.push(['trackEvent', 'Gallery', 'Anchor Click', hash]); 
-      });
-    });
-  });
-</script>
-
-
-
   </head>
   <body>
     <header><head>
+
 </head>
 
 <nav class="navbar">
@@ -75,10 +38,6 @@
     </li>
 
     <li>
-      <a href="/gallery/">Gallery</a>
-    </li>
-
-    <li>
       <a href="/contact/">Contact</a>
     </li>
   
@@ -93,12 +52,11 @@
 
 <main class="main-content">
   
-    <section class="default">
-      <h1 id="impressum">Impressum</h1>
+  <section class="default"><h1 id="impressum">Impressum</h1>
 <h2 id="anbieter">Anbieter:</h2>
 <p>Lukas Mayr<br>
-Technickerstraße 7
-6020 Innsbruck</p>
+Eupenerstraße 111
+52066 Aachen</p>
 <h2 id="kontakt">Kontakt:</h2>
 <p>Telefon: 3472485080<br>
 E-Mail: <a href="mailto:lukas.mayr01@gmail.com">lukas.mayr01@gmail.com</a><br>
@@ -106,18 +64,9 @@ Website: <a href="https://www.lukas-mayr.com">www.lukas-mayr.com</a></p>
 <hr>
 <h2 id="hinweise">Hinweise</h2>
 <p>Es wird ausdrücklich darauf hingewiesen, dass wir für Seiten, die von dieser Webseite aus verlinkt sind, keinerlei Einfluss auf die dort publizierten Inhalte oder die Gestaltung haben. Wir übernehmen somit keinerlei Haftung oder Garantieren für die Inhalte der verlinkten Seiten. Wir distanzieren uns ausdrücklich von der zum Ausdruck gebrachten Meinung auf diesen Seiten, da diese nicht in jedem Fall unserer Meinung entsprechen kann.</p>
-<h3 id="hinweis-zu-google-analytics">Hinweis zu Google Analytics</h3>
-<p>Wir weisen Sie darauf hin, dass auf dieser Website Google Analytics eingesetzt wird, ein Webanalysedienst der Google Inc. („Google“).</p>
-<h3 id="datenschutzerklärung-für-die-nutzung-von-google-analytics">Datenschutzerklärung für die Nutzung von Google Analytics</h3>
-<p>Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. (&ldquo;Google&rdquo;). Google Analytics verwendet sog. &ldquo;Cookies&rdquo;, Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Im Falle der Aktivierung der IP-Anonymisierung auf dieser Webseite wird Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt.
-Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringen. Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt.
-Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können. Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren: <a href="https://tools.google.com/dlpage/gaoptout?hl=de">https://tools.google.com/dlpage/gaoptout?hl=de</a></p>
-<p>Cookie-Richtlinie Google Analytics: <a href="https://www.google.de/policies/privacy/">https://www.google.de/policies/privacy/</a></p>
-
-    </section>
+</section>
   
 </main>
-
 
 
     <footer><p> <a href="/impressum"> Impressum</a></a> <br>&copy; 2025 <a href="https://lukas-mayr.com">Lukas Mayr</a> </p>

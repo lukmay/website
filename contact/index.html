@@ -13,47 +13,10 @@
 <link rel="stylesheet" href="/css/main.css" />
 
 
-
-<script>
-  var _paq = window._paq = window._paq || [];
-   
-  _paq.push(['trackPageView']);
-   
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u = "https://lukasmayr.matomo.cloud/";
-    _paq.push(['setTrackerUrl', u + 'matomo.php']);
-    _paq.push(['setSiteId', '1']);
-    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-    g.async = true; g.src = 'https://cdn.matomo.cloud/lukasmayr.matomo.cloud/matomo.js'; 
-    s.parentNode.insertBefore(g, s);
-  })();
-
-  
-  window.addEventListener('hashchange', function() {
-    _paq.push(['setCustomUrl', window.location.href]); 
-    _paq.push(['trackPageView']); 
-    console.log('Hash change tracked:', window.location.href);
-  });
-
-  
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-      console.log('Tracking anchor:', anchor.href); 
-      anchor.addEventListener('click', function() {
-        var hash = this.getAttribute('href');
-        console.log('Anchor clicked and event sent to Matomo:', hash); 
-        _paq.push(['trackEvent', 'Gallery', 'Anchor Click', hash]); 
-      });
-    });
-  });
-</script>
-
-
-
   </head>
   <body>
     <header><head>
+
 </head>
 
 <nav class="navbar">
@@ -75,10 +38,6 @@
     </li>
 
     <li>
-      <a href="/gallery/">Gallery</a>
-    </li>
-
-    <li>
       <a class="active_menu" href="/contact/">Contact</a>
     </li>
   
@@ -93,8 +52,7 @@
 
 <main class="main-content">
   
-    <section class="default">
-      <h1 id="get-in-touch">Get in Touch!</h1>
+  <section class="default"><h1 id="get-in-touch">Get in Touch!</h1>
 <p>If you have any questions, want to discuss an exciting project, or just feel like chatting about technology, feel free to reach out.</p>
 <h3 id="reach-out-via-email">Reach out via email:</h3>
 <p><a href="mailto:lukas.mayr01@gmail.com">Mail</a></p>
@@ -104,11 +62,9 @@
 <a href="https://www.linkedin.com/in/lukas-mayr-649a99235/"><img src="https://skillicons.dev/icons?i=linkedin" alt="Linkedin"></a>
 <a href="https://github.com/lukmay"><img src="https://skillicons.dev/icons?i=github" alt="Github"></a></p>
 <p>Looking forward to hearing from you soon! 📩</p>
-
-    </section>
+</section>
   
 </main>
-
 
 
     <footer><p> <a href="/impressum"> Impressum</a></a> <br>&copy; 2025 <a href="https://lukas-mayr.com">Lukas Mayr</a> </p>

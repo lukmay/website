@@ -13,47 +13,10 @@
 <link rel="stylesheet" href="/css/main.css" />
 
 
-
-<script>
-  var _paq = window._paq = window._paq || [];
-   
-  _paq.push(['trackPageView']);
-   
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u = "https://lukasmayr.matomo.cloud/";
-    _paq.push(['setTrackerUrl', u + 'matomo.php']);
-    _paq.push(['setSiteId', '1']);
-    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-    g.async = true; g.src = 'https://cdn.matomo.cloud/lukasmayr.matomo.cloud/matomo.js'; 
-    s.parentNode.insertBefore(g, s);
-  })();
-
-  
-  window.addEventListener('hashchange', function() {
-    _paq.push(['setCustomUrl', window.location.href]); 
-    _paq.push(['trackPageView']); 
-    console.log('Hash change tracked:', window.location.href);
-  });
-
-  
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-      console.log('Tracking anchor:', anchor.href); 
-      anchor.addEventListener('click', function() {
-        var hash = this.getAttribute('href');
-        console.log('Anchor clicked and event sent to Matomo:', hash); 
-        _paq.push(['trackEvent', 'Gallery', 'Anchor Click', hash]); 
-      });
-    });
-  });
-</script>
-
-
-
   </head>
   <body>
     <header><head>
+
 </head>
 
 <nav class="navbar">
@@ -75,10 +38,6 @@
     </li>
 
     <li>
-      <a href="/gallery/">Gallery</a>
-    </li>
-
-    <li>
       <a href="/contact/">Contact</a>
     </li>
   
@@ -92,8 +51,7 @@
     
 
 <main class="main-content">
-  
-    <section class="meta-heading">
+   <section class="meta-heading">
   <h1>Type-Safe Programming in Python</h1>
   <span>
       
@@ -114,8 +72,8 @@
   </span>
 </section>
 
-    <section class="post">
-      <p>Python is celebrated for its simplicity and flexibility, but these features come with a trade-off: a lack of built-in type safety.
+  <section class="post">
+    <p>Python is celebrated for its simplicity and flexibility, but these features come with a trade-off: a lack of built-in type safety.
 This can lead to bugs that are hard to track down, especially in large codebases.</p>
 <p>Fortunately, Python 3.5 introduced type hints, which can be enforced using tools like Mypy to bring type safety to your code. In this post, we&rsquo;ll explore how to leverage type annotations and Mypy to write more reliable Python code.</p>
 <h2 id="what-is-type-safety">What is Type Safety?</h2>
@@ -221,11 +179,10 @@ This can lead to bugs that are hard to track down, especially in large codebases
 <li><a href="http://mypy-lang.org/">Mypy Documentation</a></li>
 <li><a href="https://www.python.org/dev/peps/pep-0484/">PEP 484 – Type Hints</a></li>
 <li><a href="https://docs.python.org/3/library/typing.html">Python Typing Module</a></li>
-</ul>
-    </section>
+</ul> 
+  </section>
   
 </main>
-
 
 
     <footer><p> <a href="/impressum"> Impressum</a></a> <br>&copy; 2025 <a href="https://lukas-mayr.com">Lukas Mayr</a> </p>
