@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Check if the user has a stored preference and apply it
   if (localStorage.getItem("theme") == "light") {
     document.documentElement.classList.add("light-mode");
-    modeToggle.innerText = "⚫";
+    modeToggle.innerText = "🌙";
   } else {
-    modeToggle.innerText = "⚪";
+    modeToggle.innerText = "☀️"
   }
   // Add an event listener to the button
   modeToggle.addEventListener("click", () => {
@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (document.documentElement.classList.contains("light-mode")) {
       localStorage.setItem("theme", "light");
-      modeToggle.innerText = "⚫";
+      modeToggle.innerText = "🌙";//"⚫";
     } else {
-      modeToggle.innerText = "⚪";
+      modeToggle.innerText = "☀️";//"⚪";
       localStorage.removeItem("theme");
     }
   });
@@ -44,4 +44,67 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     lastScrollTop = scrollTop;
   });
+});
+
+// Select modal elements
+const modal = document.getElementById("image-modal");
+const modalImage = document.getElementById("modal-image");
+const modalClose = document.querySelector(".modal-close");
+const modalDescription = document.getElementById("modal-description");
+const galleryItems = document.querySelectorAll(".gallery-item");
+
+// Open modal on click
+galleryItems.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    e.preventDefault();
+    const thumbnail = item.querySelector(".gallery-thumbnail");
+    const imageSrc = thumbnail.dataset.large;
+    const imageDesc = thumbnail.dataset.desc || "";
+    
+    // Update URL fragment
+    window.location.hash = item.id;
+
+    openModal(imageSrc, imageDesc);
+  });
+});
+
+function openModal(src, desc) {
+  modal.style.display = "flex";
+  modalImage.src = src;
+  modalDescription.textContent = desc;
+}
+
+// Close modal when the close button is clicked
+modalClose.addEventListener("click", () => {
+  closeModal();
+});
+
+// Close modal when clicking outside the content box
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    closeModal();
+  }
+});
+
+function closeModal() {
+  modal.style.display = "none";
+  modalImage.src = "";
+  modalDescription.textContent = "";
+  // Remove hash to disable highlight
+  history.replaceState("", document.title, window.location.pathname + window.location.search);
+}
+
+// Optional: Check for a fragment on page load and open that image
+window.addEventListener("DOMContentLoaded", () => {
+  const hash = window.location.hash.replace("#", "");
+  if (hash) {
+    const item = document.getElementById(hash);
+    if (item) {
+      item.scrollIntoView({ behavior: "smooth", block: "center" });
+      const thumbnail = item.querySelector(".gallery-thumbnail");
+      const imageSrc = thumbnail.dataset.large;
+      const imageDesc = thumbnail.dataset.desc || "";
+      openModal(imageSrc, imageDesc);
+    }
+  }
 });

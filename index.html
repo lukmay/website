@@ -14,10 +14,47 @@
 <link rel="stylesheet" href="/css/main.css" />
 
 
+
+<script>
+  var _paq = window._paq = window._paq || [];
+   
+  _paq.push(['trackPageView']);
+   
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u = "https://lukasmayr.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u + 'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+    g.async = true; g.src = 'https://cdn.matomo.cloud/lukasmayr.matomo.cloud/matomo.js'; 
+    s.parentNode.insertBefore(g, s);
+  })();
+
+  
+  window.addEventListener('hashchange', function() {
+    _paq.push(['setCustomUrl', window.location.href]); 
+    _paq.push(['trackPageView']); 
+    console.log('Hash change tracked:', window.location.href);
+  });
+
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      console.log('Tracking anchor:', anchor.href); 
+      anchor.addEventListener('click', function() {
+        var hash = this.getAttribute('href');
+        console.log('Anchor clicked and event sent to Matomo:', hash); 
+        _paq.push(['trackEvent', 'Gallery', 'Anchor Click', hash]); 
+      });
+    });
+  });
+</script>
+
+
+
   </head>
   <body>
     <header><head>
-
 </head>
 
 <nav class="navbar">
@@ -39,6 +76,10 @@
     </li>
 
     <li>
+      <a href="/gallery/">Gallery</a>
+    </li>
+
+    <li>
       <a href="/contact/">Contact</a>
     </li>
   
@@ -54,13 +95,14 @@
   <section class="hero">
     <div class="content-wrapper">
       <div class="profile-info">
-        <h1>👋Hoi,  I'm Lukas</h1>
+        <h1>Hoi, I'm Lukas</h1>
         <h2>Master’s Student in Computer Science at RWTH Aachen</h2>
-        <p>Based in Aachen, I’m passionate about:</p> 
+        <p>Based in Aachen, I’m passionate about:</p>
         <ul>
           <li>Deep learning</li>
           <li>Computer Vision</li>
-          <li>Software-Challenges</li>
+          <li>Software Engineering</li>
+          <li>Photography</li>
         </ul>
         <br>
         <p>Check out the rest of this page,</p>
@@ -72,9 +114,7 @@
           <a href="mailto:lukas.mayr00@gmail.com" aria-label="Email">
             <i class="fas fa-envelope"></i>
           </a>
-          <a href="https://twitter.com/LukasMayr01" aria-label="Twitter">
-            <i class="fab fa-x-twitter"></i>
-          </a>
+          
           <a href="https://github.com/lukmay" aria-label="GitHub">
             <i class="fab fa-github"></i>
           </a>
